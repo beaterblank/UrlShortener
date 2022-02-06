@@ -1,0 +1,19 @@
+{
+    "name": "urlshortener",
+    "version": "1.0.0",
+    "description": "app to shorten url",
+    "main": "index.js",
+    "scripts": {
+        "watch": "nodemon",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "G.Mohan Teja",
+    "license": "ISC",
+    "dependencies": {
+        "ejs": "^3.1.6",
+        "express": "^4.17.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
+}
