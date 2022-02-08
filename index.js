@@ -10,10 +10,16 @@ app.get("/1", (req, res) => {
     res.redirect('https://www.google.com');
 })
 app.get("/r", (req, res) => {
-    let data = req.query
-    let buff = Buffer.from(data, 'base64');
-    let text = buff.toString('ascii');
-    res.send('<p>' + text + '</p>');
+    let data = req.query.url
+    const buff = Buffer.from(data, 'base64');
+    const str = buff.toString('utf-8');
+    res.redirect(str);
+})
+app.get("/s", (req, res) => {
+    let data = req.query.url
+    const buff = Buffer.from(data, 'utf-8');
+    const base64 = buff.toString('base64');
+    res.send('<p>' + base64 + '</p>');
 })
 app.use((req, res) => {
     res.status(404).render('404')
